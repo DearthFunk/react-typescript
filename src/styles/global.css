@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body.light-theme {
+  --primary: #bee9e8;
+  --secondary: #62b6cb;
+  --black: #1b4965;
+  --light: #5fa8d3;
+  --white: #eef4ed;
+
+  --background-color: var(--white);
+  --text-color: var(--black)
+}
+
+body.dark-theme {
+  --primary: #134074;
+  --secondary: #13315c;
+  --black: #0b2545;
+  --light: #778da9;
+  --white: #eef4ed;
+
+  --background-color: var(--black);
+  --text-color: var(--light)
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  

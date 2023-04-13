@@ -1,0 +1,10 @@
+# Unix-style newlines with a newline ending every file
+root=true
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# 4 space indentation
+[*.tsx, *.css]
+indent_style = space
+indent_size = 2
