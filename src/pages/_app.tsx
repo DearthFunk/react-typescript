@@ -1,5 +1,6 @@
 import '@/styles/global.css'
 import 'react-toggle/style.css'
+import '@/styles/run-state.css';
 import type { AppProps } from 'next/app'
 import Header from '@/components/_header';
 import NavigationMenu from '@/components/_navigation-menu';
@@ -7,7 +8,6 @@ import { useState } from 'react';
 
 export default function App({ Component, pageProps }: AppProps) {
   let [ darkMode, setDarkMode ] = useState<boolean>(false);
-  console.log(1);
   return (
     <main className={`flex min-h-screen flex-col ${darkMode ? "light-theme" : "dark-theme"}`}>
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
