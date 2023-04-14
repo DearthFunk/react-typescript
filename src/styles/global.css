@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body.light-theme {
+main.light-theme {
   --primary: #bee9e8;
   --secondary: #62b6cb;
   --black: #1b4965;
@@ -13,7 +13,7 @@ body.light-theme {
   --text-color: var(--black)
 }
 
-body.dark-theme {
+main.dark-theme {
   --primary: #134074;
   --secondary: #13315c;
   --black: #0b2545;
@@ -24,7 +24,7 @@ body.dark-theme {
   --text-color: var(--light)
 }
 
-body {
+main {
     background-color: var(--background-color);
     color: var(--text-color);
   }
