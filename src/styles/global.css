@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 main.light-theme {
-  --primary: #bee9e8;
-  --secondary: #62b6cb;
-  --black: #1b4965;
-  --light: #5fa8d3;
+  --black: #0b2535;
+  --dark: #207ab3;
+  --light: #62b6cb;
   --white: #eef4ed;
 
   --background-color: var(--white);
@@ -14,18 +13,28 @@ main.light-theme {
 }
 
 main.dark-theme {
-  --primary: #134074;
-  --secondary: #13315c;
   --black: #0b2545;
+  --dark: #13315c;
   --light: #778da9;
   --white: #eef4ed;
 
   --background-color: var(--black);
-  --text-color: var(--light)
+  --text-color: var(--white)
 }
 
 main {
-    background-color: var(--background-color);
-    color: var(--text-color);
-  }
-  
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+main.dark-theme a:hover {
+  color: var(--light);
+}
+
+main.light-theme a:hover {
+  color: var(--dark);
+}
+
+a {
+  text-decoration: dotted underline;
+}

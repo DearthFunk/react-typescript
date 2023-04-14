@@ -1,10 +1,11 @@
 import { PROJECTS } from './index';
 import { Project } from './index';
 
-function ProjectsPage({ name, id }: Project) {
+function ProjectsPage({ name, id, description }: Project) {
   return <div>
       <div>name: {name} </div>
       <div>id: {id ? id : 'new project'} </div>
+      <div>description: {description}</div>
     </div>
 }
 
