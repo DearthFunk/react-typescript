@@ -9,7 +9,7 @@ main.light-theme {
   --white: #eef4ed;
 
   --background-color: var(--white);
-  --text-color: var(--black)
+  --text-color: var(--black);
 }
 
 main.dark-theme {
@@ -19,7 +19,7 @@ main.dark-theme {
   --white: #eef4ed;
 
   --background-color: var(--black);
-  --text-color: var(--white)
+  --text-color: var(--white);
 }
 
 main {
@@ -38,5 +38,3 @@ main.light-theme a:hover {
 a {
   text-decoration: dotted underline;
 }
-
-

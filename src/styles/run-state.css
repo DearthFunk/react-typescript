@@ -1,7 +1,7 @@
 :root {
-  --pass: #00FF00;
-  --fail: #FF0000;
-  --stall: #0000FF;
+  --pass: #00ff00;
+  --fail: #ff0000;
+  --stall: #0000ff;
 }
 .Pass {
   background-color: var(--pass);
@@ -9,9 +9,9 @@
 }
 .Fail {
   background-color: var(--fail);
-  color: var(--black);  
+  color: var(--black);
 }
 .Stall {
   background-color: var(--stall);
-  color: var(--white);  
+  color: var(--white);
 }

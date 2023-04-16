@@ -1,11 +1,12 @@
 import { ProjectRun } from '../types/ProjectRun';
 import RunState from './RunState';
 
-function RunsTable({ projectRuns: {runs} }: any) {
+function RunsTable({ projectRuns: { runs } }: any) {
   if (runs.length === 0) {
-    return <div>NO RUNS</div>
+    return <div>NO RUNS</div>;
   }
-  return ( <div></div>
+  return (
+    <div></div>
     // <table className="table-fixed w-full">
     //   <thead className="text-left">
     //     <tr>
@@ -28,7 +29,7 @@ function RunsTable({ projectRuns: {runs} }: any) {
     //     })}
     //   </tbody>
     // </table>
-  )
+  );
 }
 
 export default RunsTable;
