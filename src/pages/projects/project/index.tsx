@@ -1,15 +1,18 @@
 import { Project, PROJECTS } from '../../../types/Project';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function ProjectPage() {
+  const { projectId } = useParams();
   const project: Project | undefined = PROJECTS.find(
-    (project) => project.id === '1'
+    (project) => project.id === projectId
   );
-  const hasRuns = false; //!!project?.runs?.length ?? false;
-
   if (!project) {
     return <div>PROJECT NOT FOUND</div>;
   }
+
+  const { runs } = project;
+  const hasRuns = runs.length > 0;
+
   return (
     <div>
       <div>name: {project.name} </div>
@@ -18,7 +21,7 @@ function ProjectPage() {
       <div>
         total runs: {project.runs.length}
         {hasRuns ? (
-          <Link to={`${project.id}/runs`} className="px-2">
+          <Link to={'runs'} className="px-2">
             View Runs
           </Link>
         ) : (

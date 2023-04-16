@@ -12,6 +12,7 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "no-debugger":"off",
     "prettier/prettier": "error",
     "@typescript-eslint/strict-boolean-expressions": [
       2,

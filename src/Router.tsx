@@ -7,6 +7,8 @@ import AboutPage from './pages/About';
 import HomePage from './pages/Home';
 import ProjectsIndexPage from './pages/projects/index';
 import ProjectPage from './pages/projects/project/index';
+import ProjectRunsIndexPage from './pages/projects/project/runs';
+import ProjectRunPage from './pages/projects/project/runs/run';
 
 const Router = createBrowserRouter([
   {
@@ -14,6 +16,14 @@ const Router = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: 'projects/:projectId/runs/:runId',
+        element: <ProjectRunPage />,
+      },
+      {
+        path: 'projects/:projectId/runs',
+        element: <ProjectRunsIndexPage />,
+      },
       {
         path: 'projects/:projectId',
         element: <ProjectPage />,

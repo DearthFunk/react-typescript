@@ -1,27 +1,22 @@
-import RunsTable from '../../../../components/RunstTable';
-import { PROJECTS } from '../../../../types/Project';
+import { useParams } from 'react-router-dom';
 import { PROJECT_RUNS, ProjectRun } from '../../../../types/ProjectRun';
+import RunsTable from '../../../../components/RunstTable';
 
-function ProjectRunsIndexPage(runs: any) {
+function ProjectRunsIndexPage() {
+  const { projectId } = useParams();
+  const projectRuns: ProjectRun[] = PROJECT_RUNS.filter(
+    (projectRun) => projectRun.projectId === projectId
+  );
+  const hasNoProjectRuns = projectRuns.length === 0;
+  if (hasNoProjectRuns) {
+    return <div>This project has no runs</div>;
+  }
+
   return (
     <div>
-      <RunsTable runs={runs} />
+      <RunsTable projectRuns={projectRuns} />
     </div>
   );
-}
-
-export async function getStaticPaths() {
-  let paths = PROJECTS.map((project) => {
-    return { params: { projectId: project.id } };
-  });
-  return { paths, fallback: false };
-}
-
-export async function getStaticProps({ params }: { params: { projectId: string } }) {
-  let projectRuns = PROJECT_RUNS.filter(
-    (projectRun: ProjectRun) => projectRun.projectId === params.projectId
-  );
-  return { props: { projectRuns } };
 }
 
 export default ProjectRunsIndexPage;
