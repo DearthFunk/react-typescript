@@ -1,4 +1,4 @@
-import { ProjectRun, PROJECT_RUNS } from './project-run';
+import { ProjectRun, PROJECT_RUNS } from './ProjectRun';
 
 export interface Project {
   id: string, //TODO:  | void, // if void = unsaved/net-new project, causes downstream issues 

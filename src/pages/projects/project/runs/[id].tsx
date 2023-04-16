@@ -1,5 +1,5 @@
 
-import { ProjectRun, PROJECT_RUNS } from '@/types/project-run';
+import { ProjectRun, PROJECT_RUNS } from '../../../../types/ProjectRun';
 
 function ProjectRunsPage({ name, id }: ProjectRun) {
   return <div>
@@ -9,16 +9,13 @@ function ProjectRunsPage({ name, id }: ProjectRun) {
 }
 
 export async function getStaticPaths() {
-  debugger;
   let paths = PROJECT_RUNS.map((projectRun) => {
     return { params: {id: projectRun.id} };
   });
-  debugger;
   return { paths, fallback: true };
 }
 
 export async function getStaticProps({ params }: { params: { id: string }}) {
-  debugger;
   let projectRun = PROJECT_RUNS.find((projectRun) => projectRun.id === params.id);
   return { props: projectRun };
 }
